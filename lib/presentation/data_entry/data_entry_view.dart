@@ -367,35 +367,6 @@ class _DataEntryViewState extends State<DataEntryView> {
     return isAnswerEmpty;
   }
 
-  Future<void> _showMyDialog() async {
-    return showDialog<void>(
-      context: context,
-      barrierDismissible: false, // user must tap button!
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: const Text(
-            'No Entries!',
-            style: TextStyle(color: Colors.red),
-          ),
-          content: SingleChildScrollView(
-            child: ListBody(
-              children: const <Widget>[
-                Text('Fill Atleast one data to save journal'),
-              ],
-            ),
-          ),
-          actions: <Widget>[
-            TextButton(
-              child: const Text('Ok'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
-        );
-      },
-    );
-  }
 
   List<Answer> autofilledList() {
     List<Answer> list = [];

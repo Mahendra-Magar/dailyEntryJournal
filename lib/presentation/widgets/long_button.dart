@@ -36,7 +36,7 @@ class _LongButtonState extends State<LongButton> {
       margin: const EdgeInsets.only(left: 12, right: 12, bottom: 2.0, top: 10),
       height: MediaQuery.of(context).size.height * 0.04,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: widget.buttonColor),
+        style: ElevatedButton.styleFrom(backgroundColor: widget.buttonColor),
         onPressed: () {
           widget.function();
         },
